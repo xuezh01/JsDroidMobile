@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--tool-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--home-->
+        <LinearLayout
+            android:id="@+id/btn_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/fm_ic_home_unsel"
+                android:duplicateParentState="true" />
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_file_root"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1000"
+            android:entries="@array/fm_file"
+            android:gravity="center"
+            android:padding="0dp"
+            android:popupTheme="@style/fm_spinner_popup"
+            android:theme="@style/fm_spinner"/>
+        <!--title-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        <!--cut-->
+        <LinearLayout
+            android:id="@+id/btn_cut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/fm_selector_cut"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+        <!--copy-->
+        <LinearLayout
+            android:id="@+id/btn_copy"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/fm_selector_copy"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+        <!--delete-->
+        <LinearLayout
+            android:id="@+id/btn_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/fm_selector_delete"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+        <!--add-->
+        <LinearLayout
+            android:id="@+id/btn_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/fm_selector_add"
+                android:duplicateParentState="true" />
+        </LinearLayout>
+        <!--selectAll-->
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <com.jsdroid.fileview.CheckBox
+                android:id="@+id/check_all"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:button="@null"
+                android:checked="false"
+                android:duplicateParentState="true"
+                android:padding="0dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#11ffffff"
+        android:padding="2dp"
+        android:textColor="#ddd" />
+    <!--list-->
+    <ListView
+        android:id="@+id/file_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#666"
+        android:dividerHeight="1px"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/layout_paste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!--cancel-->
+        <LinearLayout
+            android:id="@+id/btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/fm_ic_cancel"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="取消"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+        </LinearLayout>
+        <!--paste-->
+        <LinearLayout
+            android:id="@+id/btn_paste"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/fm_selector_button"
+            android:clickable="true"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/fm_selector_paste"
+                android:duplicateParentState="true" />
+
+            <TextView
+                android:id="@+id/tv_paste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="粘贴"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

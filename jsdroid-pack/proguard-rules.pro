@@ -1,0 +1,11 @@
+-keep class **groovy**{*;}
+-keep class **jsdroid**{*;}
+-keep class **mozilla**{*;}
+-keep class **json**{*;}
+-keep class **jsoup**{*;}
+-keep class **uiautomator**{*;}
+-keep class **android**{*;}
+-keep class **qmui**{*;}
+-keep class **shell**{*;}
+-keep class **adb**{*;}
+-keep class **apache**{*;}

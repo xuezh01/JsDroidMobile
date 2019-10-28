@@ -1,0 +1,105 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+greendao {
+    schemaVersion JSDROID_VERSION_CODE//数据库版本号
+    daoPackage 'com.jsdroid.app.dao'//设置DaoMaster、DaoSession、Dao包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    //targetGenDirTest：设置生成单元测试目录
+    //generateTests：设置自动生成单元测试用例
+}
+android {
+    compileSdkVersion 27
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    defaultConfig {
+        applicationId "com.jsdroid.app"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode JSDROID_VERSION_CODE
+        versionName JSDROID_VERSION
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。   // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+            abiFilters 'armeabi-v7a'//, 'x86'//'armeabi' ,'armeabi-v7a',  'arm64-v8a'
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexKeepProguard file('multidex-config.pro')
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    applicationVariants.all {
+        output ->
+            println output
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:27.1.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile project(path: ':jsdroid-groovy')
+    compile project(path: ':jsdroid-mvp')
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile "com.qmuiteam:qmui:$QMUI_VERSION"
+    //漂亮的输入框
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    compile project(path: ':jsdroid-letter-list')
+    compile project(path: ':jsdroid-floatview')
+    //界面设计
+    //    compile 'me.ele:uetool:1.0.17'
+    compile project(path: ':jsdroid-float-menu')
+    compile project(path: ':jsdroid-runner')
+    compile project(path: ':jsdroid-api')
+    compile project(path: ':jsdroid-ipc')
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile "com.alibaba:fastjson:$FAST_JSON_VERSION"
+    compile "org.apache.commons:commons-io:$COMMONS_IO_VERSION"
+    compile project(path: ':jsdroid-commons')
+    compile project(path: ':jsdroid-fileview')
+    compile project(path: ':jsdroid-editor')
+    compileOnly files('../libs/groovy.jar')
+    compile 'net.lingala.zip4j:zip4j:1.3.2'
+    compile 'com.ditclear:swipedraglayout:1.1.0'
+    compile project(path: ':jsdroid-tree')
+    compile project(path: ':color-picker')
+    compile 'com.jph.takephoto:takephoto_library:4.0.3'
+    //权限申请框架
+    compile('com.yanzhenjie.permission:support:2.0.1') {
+        //移除冲突包
+        exclude(group: "com.android.support")
+    }
+    //git
+    //compile 'org.eclipse.jgit:org.eclipse.jgit:3.7.1.201504261725-r'
+    compile project(path: ':jsdroid-server-api')
+    //图片加载框架
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //retrofit框架
+    compile 'com.squareup.retrofit2:retrofit:2.6.0'
+    //下载器
+    compile 'com.liulishuo.filedownloader:library:1.7.6'
+    //轮播图
+    //compile 'com.youth.banner:banner:1.4.10'
+    compile project(path: ':jsdroid-os')
+}

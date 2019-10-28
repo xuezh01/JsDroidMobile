@@ -1,0 +1,7 @@
+-keep class com.jsdroid**{*;}
+-keep class **groovy**{*;}
+-keep class com.android.dx**{*;}
+-keep class org.jsoup.**{*;}
+-keep class **.libsuperuser.**{*;}
+-keep class org.apache.commons.**{*;}
+-keep class com.alibaba.fastjson.**{*;}

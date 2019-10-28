@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path:":jsdroid-ipc")
+    implementation project(path:":jsdroid-api")
+}
+//apply plugin:'maven'
+//uploadArchives{
+//    repositories{
+//        mavenDeployer{
+//            repository(url:'http://maven.jsdroid.com/repository/jsdroid/'){
+//                authentication(userName:"jsdroid",password:"jsdroid20190409")
+//            }
+//            pom.groupId = "com.jsdroid"
+//            pom.artifactId = "jsdroid-input"
+//            pom.version = "$JSDROID_INPUT_VERSION"
+//        }
+//    }
+//}

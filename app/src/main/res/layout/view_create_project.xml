@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:qmui_topbar_bg_color="@color/colorPrimary"
+        app:qmui_topbar_title_color="@color/qmui_config_color_white"
+        app:qmui_topbar_title_gravity="left_center">
+
+    </com.qmuiteam.qmui.widget.QMUITopBar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@drawable/logo_blue_dark" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:editable="false"
+            android:hint="图标"
+            android:text="/sdcard/icon.png"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="请选择图标" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="名称"
+            android:singleLine="true"
+            android:text="新建工程"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="请输入工程名称">
+
+            <requestFocus />
+        </com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_pkg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:digits="@string/filterPwd"
+            android:hint="包名"
+            android:inputType="textEmailSubject"
+            android:singleLine="true"
+            android:text="com.company.project"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelText="请输入工程包名" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edit_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="介绍*"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="请输入工程介绍*" />
+
+    </LinearLayout>
+</LinearLayout>

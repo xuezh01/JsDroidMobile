@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //自己编译的groovy
+    implementation files('../libs/groovy.jar')
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    //用于即时编译dex
+    implementation 'com.google.android.tools:dx:1.7'
+    //    implementation 'com.google.android.tools:dx:1.16'
+//    implementation files('libs/dx.jar')
+}
+
+//apply plugin: 'maven'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: 'http://maven.jsdroid.com/repository/jsdroid/') {
+//                authentication(userName: "jsdroid", password: "jsdroid20190409")
+//            }
+//            pom.groupId = "com.jsdroid"
+//            pom.artifactId = "jsdroid-groovy"
+//            pom.version = "$JSDROID_GROOVY_VERSION"
+//        }
+//    }
+//}

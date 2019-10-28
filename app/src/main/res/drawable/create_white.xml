@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:alpha="1.0"
+    android:antialias="false"
+    android:dither="false"
+    android:filter="true"
+    android:mipMap="true"
+    android:src="@drawable/icon_create"
+    android:tint="@color/qmui_config_color_white"
+    android:tintMode="src_atop" />

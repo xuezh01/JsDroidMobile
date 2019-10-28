@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">JsDroid</string>
+    <string name="filterPwd">0123456789zxcvbnmasdfghjklqwertyuiopZXCVBNMASDFGHJKLQWERTYUIOP.</string>
+</resources>

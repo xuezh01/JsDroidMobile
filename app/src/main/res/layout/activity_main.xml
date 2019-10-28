@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jsdroid.app.view.FullHeightLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--主界面-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--导航栏-->
+            <com.qmuiteam.qmui.widget.QMUITopBar
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:qmui_topbar_bg_color="@color/colorPrimary"
+                app:qmui_topbar_title_color="@color/qmui_config_color_white"
+                app:qmui_topbar_title_gravity="left_center">
+
+            </com.qmuiteam.qmui.widget.QMUITopBar>
+
+            <!--主界面-->
+            <com.qmuiteam.qmui.widget.QMUIViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            </com.qmuiteam.qmui.widget.QMUIViewPager>
+            <!--tab-->
+            <com.qmuiteam.qmui.widget.QMUITabSegment
+                android:id="@+id/tab"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="?attr/qmui_list_item_bg_with_border_top"
+                android:textSize="12dp"
+                app:qmui_tab_icon_position="top">
+
+            </com.qmuiteam.qmui.widget.QMUITabSegment>
+        </LinearLayout>
+        <!--菜单栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/qmui_config_color_white"
+            android:clickable="true"
+            android:orientation="vertical">
+            <!--logo-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
+                <!--logo-->
+                <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="10dp"
+                    android:background="?android:selectableItemBackground"
+                    android:src="@drawable/default_user_icon"
+                    app:qmui_border_color="@color/qmui_config_color_white"
+                    app:qmui_border_width="1dp"
+                    app:qmui_is_circle="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/textWelcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="欢迎使用JsDroid!"
+                        android:textColor="@color/qmui_config_color_white"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="?android:selectableItemBackground"
+                        android:clickable="true"
+                        android:text="点击登录"
+                        android:textColor="#fff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <!--选项-->
+                <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+                    android:id="@+id/optionListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView>
+            </ScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#ccc" />
+            <!--设置-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/btnOption"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_settings" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="设置" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnQuit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_exit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="退出" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+</com.jsdroid.app.view.FullHeightLayout>

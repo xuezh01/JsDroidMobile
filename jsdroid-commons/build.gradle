@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 27
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.jsoup:jsoup:1.11.3'
+    //1.2.56
+    implementation "com.alibaba:fastjson:$FAST_JSON_VERSION"
+    implementation "org.apache.commons:commons-io:$COMMONS_IO_VERSION"
+//    implementation("eu.chainfire:libsuperuser:$SUPER_USER_VERSION")
+    implementation files('../libs/superuser.jar')
+
+    implementation project(path: ':android-hidden-api')
+}
+
+//apply plugin: 'maven'
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: 'http://maven.jsdroid.com/repository/jsdroid/') {
+//                authentication(userName: "jsdroid", password: "jsdroid20190409")
+//            }
+//            pom.groupId = "com.jsdroid"
+//            pom.artifactId = "jsdroid-commons"
+//            pom.version = "$JSDROID_COMMONS_VERSION"
+//        }
+//    }
+//}

@@ -1,0 +1,30 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="fm_spinner">
+        <item name="android:textColor">#dddddd</item>
+        <item name="android:textSize">14sp</item>
+        <item name="colorControlNormal">#ddffffff</item>
+    </style>
+
+    <style name="fm_spinner_popup">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">#333333</item>
+    </style>
+</resources>

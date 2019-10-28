@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly files('libs/framework.jar')
+    compileOnly files('../libs/superuser.jar')
+//    compileOnly("eu.chainfire:libsuperuser: 1.0.0.201811281328")
+    compileOnly 'com.alibaba:fastjson:1.2.56'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

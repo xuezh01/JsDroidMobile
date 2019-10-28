@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:title="系统">
+        <menu>
+            <item
+                android:id="@+id/menu_open_capture"
+                android:title="截屏" />
+            <item
+                android:id="@+id/menu_open_log"
+                android:title="日志" />
+        </menu>
+    </item>
+
+    <item android:title="导出">
+        <menu>
+            <item
+                android:id="@+id/menu_export_jsd"
+                android:title="导出JSD" />
+            <item
+                android:id="@+id/menu_export_project"
+                android:title="导出工程" />
+        </menu>
+    </item>
+    <!--
+        <item
+            android:id="@+id/menu_publish"
+            android:title="发布" />-->
+
+    <item
+        android:id="@+id/menu_close"
+        android:title="关闭" />
+
+</menu>

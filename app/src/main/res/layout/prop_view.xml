@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="ID: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="name" />
+
+    <com.jsdroid.app.design.prop.WidthPropView
+        android:id="@+id/propWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="宽度: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="width" />
+
+    <com.jsdroid.app.design.prop.WidthPropView
+        android:id="@+id/propHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="高度: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="height" />
+
+    <com.jsdroid.app.design.prop.NumberPropView
+        android:id="@+id/propWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="占空闲比例: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="weight" />
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="内边距: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="padding" />
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propMargin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="外边距: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="margin" />
+
+    <com.jsdroid.app.design.prop.GravityPropView
+        android:id="@+id/propGravity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="对齐方式: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="gravity" />
+
+    <com.jsdroid.app.design.prop.OrientationPropView
+        android:id="@+id/propOrientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="布局排列方向: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="orientation" />
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="文字: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="text" />
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="hint: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="hint" />
+
+    <com.jsdroid.app.design.prop.ColorPropView
+        android:id="@+id/propTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="文字颜色: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="textColor" />
+
+    <com.jsdroid.app.design.prop.ColorPropView
+        android:id="@+id/propHintColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="hint颜色: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="hintColor" />
+
+    <com.jsdroid.app.design.prop.NumberPropView
+        android:id="@+id/propTextSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="文字大小: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="textSize" />
+
+    <com.jsdroid.app.design.prop.SpinnerPropView
+        android:id="@+id/propInputType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="输入框类型: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="inputType" />
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="背景图: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="backgroundImage" />
+
+    <com.jsdroid.app.design.prop.TextPropView
+        android:id="@+id/propPressBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="点击背景图: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="pressedImage" />
+
+    <com.jsdroid.app.design.prop.ColorPropView
+        android:id="@+id/propBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="背景色: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="backgroundColor" />
+
+    <com.jsdroid.app.design.prop.ColorPropView
+        android:id="@+id/propPressBackgroundColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="点击背景色: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="pressedColor" />
+
+    <com.jsdroid.app.design.prop.ColorPropView
+        android:id="@+id/propBorderColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="边框色: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="borderColor" />
+
+    <com.jsdroid.app.design.prop.ColorPropView
+        android:id="@+id/propPressBorderColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="点击边框色: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="pressedBorderColor" />
+
+    <com.jsdroid.app.design.prop.NumberPropView
+        android:id="@+id/propBorderWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="边框大小: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="borderSize" />
+
+    <com.jsdroid.app.design.prop.NumberPropView
+        android:id="@+id/propRadius"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="圆角: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="radius" />
+
+    <com.jsdroid.app.design.prop.NumberPropView
+        android:id="@+id/propChecked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_rect"
+        android:hint="是否选中: "
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:textColorHint="#ddd"
+        app:propName="checked" />
+
+</LinearLayout>

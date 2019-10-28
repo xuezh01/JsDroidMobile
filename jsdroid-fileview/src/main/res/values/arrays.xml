@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fm_file">
+        <item>项目文件</item>
+        <item>手机存储</item>
+    </string-array>
+</resources>

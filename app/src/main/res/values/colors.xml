@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1296db</color>
+    <color name="colorPrimaryDark">#1296db</color>
+    <color name="colorAccent">#1296db</color>
+    <color name="searchGray">#EEE</color>
+    <color name="colorRed">#f66</color>
+    <color name="float_small">#33000000</color>
+    <color name="float_small_touch">#66000000</color>
+
+    <color name="colorListItemDown">#dddddd</color>
+    <color name="colorTranslate">#33000000</color>
+    <color name="colorListItemUp">#ffffff</color>
+</resources>

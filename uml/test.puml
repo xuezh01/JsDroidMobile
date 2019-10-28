@@ -1,0 +1,35 @@
+@startuml
+start
+if (是否已经启动服务？) then (是)
+else (否)
+    if (是否已经安装服务？)then (是)
+    else (否)
+        :安装服务;
+        if (方式一是否能够启动服务？) then (是)
+        elseif(方式二是否能够启动服务?) then(是)
+        else (否)
+            :提示启动服务失败原因;
+            stop
+        endif
+        :服务测试;
+        if (是否支持节点搜索?) then(是)
+        else (否)
+            :提示不支持节点;
+        endif
+
+        if (是否能够加载so库?) then(是)
+        else (否)
+            :提示不支持加载so库;
+        endif
+
+        if (是否支持截图?) then(是)
+        else (否)
+            :提示不支持截图;
+        endif
+
+    endif
+    :启动服务;
+endif
+:打开主界面;
+stop
+@enduml

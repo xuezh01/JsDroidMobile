@@ -1,0 +1,1 @@
+ndk-build && del libs\armeabi-v7a\minicap.so && del libs\x86\minicap.so

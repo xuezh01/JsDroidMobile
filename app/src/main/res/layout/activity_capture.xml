@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.qmuiteam.qmui.widget.QMUITopBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:qmui_topbar_bg_color="@color/colorPrimary"
+        app:qmui_topbar_need_separator="false"
+        app:qmui_topbar_title_color="#fff"
+        app:qmui_topbar_title_gravity="left_center">
+
+    </com.qmuiteam.qmui.widget.QMUITopBar>
+
+    <com.jsdroid.widget.NoInterceptDrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--截图-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <com.jsdroid.app.capture.image.CaptureImageView
+                android:id="@+id/captureView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <!--节点信息-->
+        <LinearLayout
+            android:id="@+id/nodeInfoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:background="#33000000"
+            android:orientation="vertical">
+            <!--搜索框-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/edit_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="#fff"
+                    android:hint="请输入text、desc、clazz、pkg"
+                    android:imeOptions="actionSearch"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:singleLine="true"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/btnSearch"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="搜索" />
+            </RelativeLayout>
+            <!--节点树-->
+            <com.jsdroid.app.capture.node.HView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.5"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/treeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="300dp"
+                    android:overScrollMode="never">
+
+                </android.support.v7.widget.RecyclerView>.
+            </com.jsdroid.app.capture.node.HView>
+            <!--节点属性表-->
+            <LinearLayout
+                android:id="@+id/nodeView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#1000"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!-- 点击 -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_click"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="点击: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#f31f26" />
+                        <!-- 查找 -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_find"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="查找: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#f34f1f" />
+                        <!-- 定位 -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_pos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="定位: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#f3811f" />
+                        <!-- index -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_index"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="index: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#80f31f" />
+                        <!-- depth -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_depth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="depth: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#1f87f3" />
+                        <!-- res -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_res"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="res: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#616ff3" />
+                        <!-- text -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="text: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#911ff3" />
+                        <!-- pkg -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_pkg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="pkg: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#cbf31f" />
+                        <!-- clazz -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_clazz"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="class: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#f31f87" />
+                        <!-- rect -->
+                        <com.jsdroid.app.view.BasePropView
+                            android:id="@+id/n_rect"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/selector_rect"
+                            android:clickable="true"
+                            android:hint="rect: "
+                            android:padding="5dp"
+                            android:textColor="#ddd"
+                            android:textColorHint="#1dffee" />
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.jsdroid.widget.NoInterceptDrawerLayout>
+</LinearLayout>

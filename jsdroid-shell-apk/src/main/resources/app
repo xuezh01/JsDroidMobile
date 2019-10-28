@@ -1,0 +1,27 @@
+#
+# Copyright (C) 2018 JsDroid
+#
+if [ -z "${1}" ]; then
+    echo "Usage:\n\tapp [file] [class]"
+    exit
+fi
+if [ -z "${2}" ]; then
+    echo "Usage:\n\tapp [file] [class]"
+    exit
+fi
+
+trap "" HUP
+if [ ${USER_ID} -ne 0 ]; then
+    # no root
+    mkdir -p /data/local/tmp/no_root/dalvik-cache
+    export ANDROID_DATA=/data/local/tmp/no_root
+fi
+
+export CLASSPATH=${1}
+if [ -f /system/bin/app_process32 ];then
+    #app_process32
+    exec app_process32 /system/bin ${2}
+else
+    #app_process
+    exec app_process /system/bin ${2}
+fi

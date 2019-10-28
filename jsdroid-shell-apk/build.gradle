@@ -1,0 +1,60 @@
+import com.android.build.gradle.api.ApplicationVariant
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+
+    defaultConfig {
+        applicationId "com.jsdroid.shell"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+
+    }
+    android.applicationVariants.all {
+        variant ->
+        variant.outputs.all {
+            outputFileName = "shell.apk"
+        }
+    }
+//    applicationVariants.each {
+//        variant ->
+//            println("name:"+variant.outputFile)
+//    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(':jsdroid-script')
+    implementation project(':jsdroid-api')
+    implementation project(':jsdroid-commons')
+    implementation project(':jsdroid-ipc')
+    //用于即时编译dex
+    implementation 'com.google.android.tools:dx:1.7'
+    implementation files('../libs/superuser.jar')
+//    implementation ("eu.chainfire:libsuperuser:$SUPER_USER_VERSION")
+    implementation "com.alibaba:fastjson:$FAST_JSON_VERSION"
+    implementation 'org.apache.commons:commons-io:1.3.2'
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation group: 'org.mozilla', name: 'rhino', version: '1.7.10'
+    implementation project(':android-hidden-api')
+}
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT" />
+        </compositeConfiguration>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/develop/gradle-4.10.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/color-picker" />
+            <option value="$PROJECT_DIR$/edit-test" />
+            <option value="$PROJECT_DIR$/jsdroid-adb" />
+            <option value="$PROJECT_DIR$/jsdroid-api" />
+            <option value="$PROJECT_DIR$/jsdroid-colors" />
+            <option value="$PROJECT_DIR$/jsdroid-commons" />
+            <option value="$PROJECT_DIR$/jsdroid-editor" />
+            <option value="$PROJECT_DIR$/jsdroid-fileview" />
+            <option value="$PROJECT_DIR$/jsdroid-float-menu" />
+            <option value="$PROJECT_DIR$/jsdroid-floatview" />
+            <option value="$PROJECT_DIR$/jsdroid-groovy" />
+            <option value="$PROJECT_DIR$/jsdroid-input" />
+            <option value="$PROJECT_DIR$/jsdroid-ipc" />
+            <option value="$PROJECT_DIR$/jsdroid-jpeg" />
+            <option value="$PROJECT_DIR$/jsdroid-letter-list" />
+            <option value="$PROJECT_DIR$/jsdroid-minicap" />
+            <option value="$PROJECT_DIR$/jsdroid-mvp" />
+            <option value="$PROJECT_DIR$/jsdroid-pack" />
+            <option value="$PROJECT_DIR$/jsdroid-runner" />
+            <option value="$PROJECT_DIR$/jsdroid-script" />
+            <option value="$PROJECT_DIR$/jsdroid-server-api" />
+            <option value="$PROJECT_DIR$/jsdroid-shell-apk" />
+            <option value="$PROJECT_DIR$/jsdroid-tree" />
+            <option value="$PROJECT_DIR$/jsdroid-ui" />
+            <option value="$PROJECT_DIR$/jsdroid-uiautomator2" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

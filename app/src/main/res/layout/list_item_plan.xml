@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/propIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo_blue_dark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.jsdroid.app.main.task.PropView
+                android:id="@+id/propType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="类型: "
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="12dp"
+                app:propStyle="light" />
+
+            <com.jsdroid.app.main.task.PropView
+                android:id="@+id/propCycle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:hint="周期: "
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="12dp"
+                app:propStyle="light" />
+        </LinearLayout>
+
+        <com.jsdroid.app.main.task.PropView
+            android:id="@+id/propTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:hint="时间: "
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="12dp"
+            app:propStyle="light" />
+
+        <com.jsdroid.app.main.task.PropView
+            android:id="@+id/propTool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:hint="脚本: "
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="12dp"
+            app:propStyle="light" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="designView">
+        <attr name="propName" format="string" />
+        <attr name="propStyle" format="enum">
+            <enum name="dark" value="1" />
+            <enum name="light" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <item name="tag_single_flag" type="id"></item>
+
+</resources>
